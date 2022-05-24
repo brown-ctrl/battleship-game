@@ -1,0 +1,36 @@
+So, I was writing this method in a battleship game I'm working on, then I encountered a bug - the code inside the first if statement wasn't working. Not until I commented out the first line in the code. I ended up changing its position - putting it as the last line before the next 'if' statement. 
+
+My question is - "Why doesn't it work if "ship.hits(index) = "hit";" is at the top?"
+
+
+fire: function (guess) {
+        for (var i = 0; i < this.numShips; i++)// <-- iterate thru all ships 
+        {
+            let ship = this.ships[i]; // access each ships array
+            let index = ship.locations.indexOf(guess); // grab the index of 'guess' in the locations array. index will be < 0 if guess is not in locations array 
+           
+
+//----------------------------------------------------------below code----------------------
+
+ if (index >= 0) {
+		ship.hits(index) = "hit"; // if the guess is in the locations array, update the corresponding 'hits' index to "hit"
+                view.displayHit(guess);
+                view.displayMsg('HIT!');
+                
+
+//--------------------------------------------------------------above code-------------------
+
+
+
+                if (this.isSunk(ship)) { //<-- if a ship gets sunk, 
+                    view.displayMsg("YOU SANK MY BATTLESHIP! 😒")
+                    this.shipsSunk++; //increment the shipsSunk property
+                }
+                return true;
+            }
+
+        }
+        view.displayMiss(guess);
+        view.displayMsg("MISSED ME! HAHA!😂");
+        return false;
+    }

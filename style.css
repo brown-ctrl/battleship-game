@@ -1,0 +1,61 @@
+*,
+*::after,
+*::before {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+
+}
+
+body {
+    background-color: black;
+}
+
+div#board {
+    position: relative;
+    width: 1024px;
+    height: 863px;
+    margin: auto;
+    background: url(assets/board.jpg) no-repeat;
+}
+div#messageArea {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+
+}
+.hit {
+background: url(/assets/ship.png) no-repeat center center;
+background-size: contain;
+}
+.miss {
+    background: url(/assets/miss.png) no-repeat center center;
+background-size: contain;
+}
+table {
+    position: absolute;
+    left: 152px;
+    top: 53px;
+    border-spacing: 0px;
+   }
+   td {
+    width: 100px;
+    height: 102px;
+   }
+   form {
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    padding: 15px;
+    background-color: rgb(247, 70, 0);
+   }
+   form input {
+    background-color: rgb(102, 102, 101);
+    border-color: rgb(0, 69, 97);
+    font-size: 1em;
+   }
+   
