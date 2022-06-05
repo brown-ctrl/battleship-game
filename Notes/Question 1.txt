@@ -34,3 +34,4 @@ fire: function (guess) {
         view.displayMsg("MISSED ME! HAHA!😂");
         return false;
     }
+why don't my isSunk method work properly??
