@@ -15,47 +15,67 @@ body {
 
 div#board {
     position: relative;
-    width: 1024px;
-    height: 863px;
+    width: 100%;
+    height: 90vh;
     margin: auto;
-    background: url(assets/board.jpg) no-repeat;
+    background: #007add url(resources/board.jpg) no-repeat center center;
+    background-size: contain;
 }
+    /* background-image: url(assets/board.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: unset;
+    background-size: contain;
+    background-color: #007add;
+} */
 div#messageArea {
     position: absolute;
-    top: 0px;
-    left: 0px;
+    top: 10vh;
+    left: 10vw;
     color: rgb(255, 255, 255);
     font-weight: bold;
 
 }
 .hit {
-background: url(/assets/ship.png) no-repeat center center;
+background: url(resources/ship.png) no-repeat center center;
 background-size: contain;
 }
 .miss {
-    background: url(/assets/miss.png) no-repeat center center;
+    background: url(resources/miss.png) no-repeat center center;
 background-size: contain;
 }
 table {
+    /* background-color: rgba(250, 235, 215, 0.445); */
     position: absolute;
-    left: 152px;
-    top: 53px;
+    width: 36vw;
+    height: 36vw;
+    left: 31.5vw;
+    top: 6vh;
     border-spacing: 0px;
    }
+
+/* ------------------------------------- */
    td {
-    width: 100px;
-    height: 102px;
+    outline-style: dashed;
+    outline-width: 1px;
+    outline-color: red;
    }
+/* ------------------------------------ */
+
    form {
     position: absolute;
     bottom: 0px;
     right: 0px;
     padding: 15px;
-    background-color: rgb(247, 70, 0);
-   }
+    background-color: #007add;
+    width: 100vw;
+    height: 10vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
    form input {
     background-color: rgb(102, 102, 101);
     border-color: rgb(0, 69, 97);
     font-size: 1em;
    }
-   
